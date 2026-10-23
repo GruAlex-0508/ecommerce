@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_remove_cart_dialog">
+
+    <TextView
+        android:id="@+id/tvRemoveTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_28"
+        android:paddingBottom="@dimen/dp_12"
+        android:text="Remove from Cart?"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="?attr/text_size_24" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:alpha="0.4"
+        android:background="?attr/colorPrimary" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_20">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/dp_116"
+            android:layout_height="@dimen/dp_96"
+            app:cardCornerRadius="@dimen/dp_16"
+            app:cardElevation="@dimen/dp_2">
+
+            <ImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:padding="@dimen/dp_8" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/dp_20"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chair"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="?attr/text_size_20"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvProductSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Size : XL"
+                android:textColor="@color/grey_500"
+                android:textSize="?attr/text_size_14" />
+
+
+            <TextView
+                android:id="@+id/tvProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="$380"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="?attr/text_size_20"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Quantity: 1"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="?attr/text_size_16" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:alpha="0.4"
+        android:background="?attr/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_18"
+        android:paddingBottom="@dimen/dp_20"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/btnNo"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:gravity="center"
+            android:text="No"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="?attr/text_size_18"
+            android:background="@drawable/bg_remove_no_button"
+            android:foreground="@drawable/bg_ripple"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/btnYes"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp_10"
+            android:gravity="center"
+            android:text="Yes"
+            android:textColor="@android:color/white"
+            android:textSize="?attr/text_size_18"
+            android:background="@drawable/bg_remove_yes_button"
+            android:foreground="@drawable/bg_ripple"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</LinearLayout>

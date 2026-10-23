@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_building"
+            android:icon="@drawable/ic_product_building"
+            android:title="@string/nav_item_building" />
+        <item
+            android:id="@+id/nav_car"
+            android:icon="@drawable/ic_product_car"
+            android:title="@string/nav_item_car" />
+        <item
+            android:id="@+id/nav_promotion"
+            android:icon="@drawable/ic_promotion"
+            android:title="@string/nav_item_promotion" />
+        <item
+            android:id="@+id/nav_foreign"
+            android:icon="@drawable/ic_globe"
+            android:title="@string/nav_item_foreign" />
+        <item
+            android:id="@+id/nav_basket"
+            android:icon="@drawable/ic_basket"
+            android:title="@string/nav_item_basket" />
+        <item
+            android:id="@+id/nav_favourite"
+            android:icon="@drawable/ic_favourite"
+            android:title="@string/nav_item_favourite" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_setting"
+            android:title="@string/nav_item_setting" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_feedback"
+            android:title="@string/nav_item_feedback" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help"
+            android:title="@string/nav_item_help" />
+    </group>
+
+<!--    <group android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:id="@+id/nav_sign"-->
+<!--            android:icon="@drawable/ic_sign_out"-->
+<!--            android:title="@string/nav_item_sign_out" />-->
+<!--    </group>-->
+</menu>

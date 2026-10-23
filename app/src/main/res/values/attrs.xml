@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="text_size_6" format="dimension" />
+    <attr name="text_size_8" format="dimension" />
+    <attr name="text_size_10" format="dimension" />
+    <attr name="text_size_12" format="dimension" />
+    <attr name="text_size_14" format="dimension" />
+    <attr name="text_size_16" format="dimension" />
+    <attr name="text_size_18" format="dimension" />
+    <attr name="text_size_20" format="dimension" />
+    <attr name="text_size_22" format="dimension" />
+    <attr name="text_size_24" format="dimension" />
+    <attr name="text_size_26" format="dimension" />
+    <attr name="text_size_28" format="dimension" />
+    <attr name="text_size_30" format="dimension" />
+    <attr name="text_size_32" format="dimension" />
+    <attr name="text_size_34" format="dimension" />
+    <attr name="text_size_36" format="dimension" />
+    <attr name="text_size_38" format="dimension" />
+    <attr name="text_size_40" format="dimension" />
+    <attr name="text_size_42" format="dimension" />
+
+    <attr name="navGradient1" format="color" />
+    <attr name="navGradient2" format="color" />
+    <attr name="navGradient3" format="color" />
+
+    <attr name="bgGradient1" format="color" />
+    <attr name="bgGradient2" format="color" />
+
+    <attr name="bottomNavGradient1" format="color" />
+    <attr name="bottomNavGradient2" format="color" />
+
+    <attr name="colorRipple" format="color" />
+    <attr name="colorSecondaryAlpha30" format="color" />
+
+    <declare-styleable name="MIDrawerView">
+        <eat-comment />
+        <attr name="sliderType">
+            <enum name="scroll" value="1"/>
+            <enum name="doorIn" value="2"/>
+            <enum name="doorOut" value="3"/>
+            <enum name="slide" value="4"/>
+            <enum name="slideRotate" value="5"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomMaterialCardView">
+        <attr name="cornerTopLeftRadius" format="dimension" />
+        <attr name="cornerTopRightRadius" format="dimension" />
+        <attr name="cornerBottomLeftRadius" format="dimension" />
+        <attr name="cornerBottomRightRadius" format="dimension" />
+    </declare-styleable>
+</resources>

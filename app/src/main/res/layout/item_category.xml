@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardCategory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_20"
+    android:layout_marginTop="@dimen/dp_16"
+    app:cardCornerRadius="@dimen/dp_16"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/transparent"
+    app:rippleColor="?attr/colorRipple"
+    app:strokeColor="?attr/colorPrimary"
+    app:strokeWidth="@dimen/dp_1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutCategoryHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_104"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/dp_16">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgMainCategory"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:scaleType="centerCrop"
+                android:src="@drawable/category_circle"
+                app:shapeAppearanceOverlay="@style/CategoryImageShape" />
+
+            <TextView
+                android:id="@+id/tvMainCategoryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="?attr/text_size_24" />
+
+            <TextView
+                android:id="@+id/tvMainCategoryCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="@dimen/dp_12"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="?attr/text_size_24" />
+
+            <ImageView
+                android:id="@+id/imgExpandCategory"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_category_expand"
+                app:tint="?attr/colorPrimary" />
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSubcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardBackgroundColor="?attr/colorSecondaryAlpha30"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
+            app:strokeColor="?attr/colorPrimary">
+
+            <LinearLayout
+                android:id="@+id/layoutSubcategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_12">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSubcategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".fragment.shipping.CheckoutFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_156">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_140"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:backgroundTint="@color/transparent"
+                app:cardCornerRadius="@dimen/dp_20"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="@dimen/dp_2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_30"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_address_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginEnd="@dimen/dp_4"
+                        android:contentDescription="@string/content_description"
+                        android:src="@drawable/ic_location" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/shipping_address"
+                            android:layout_width="@dimen/dp_200"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:maxLines="1"
+                            android:text="@string/shipping_title_home"
+                            android:textColor="?attr/colorPrimary"
+                            android:textSize="?attr/text_size_22"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/shipping_location"
+                            android:layout_width="@dimen/dp_200"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.6"
+                            android:maxLines="2"
+                            android:text="@string/shipping_title_temp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textSize="?attr/text_size_16"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/checkout_change_location"
+                            android:layout_width="@dimen/dp_80"
+                            android:layout_height="@dimen/dp_40"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:insetLeft="0dp"
+                            android:insetRight="0dp"
+                            android:text="@string/shipping_btn_change"
+                            android:padding="0dp"
+                            android:textSize="?attr/text_size_14"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_40"
+                android:background="@color/white"
+                android:text="@string/shipping_address"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="?attr/text_size_24"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_156"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_140"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:backgroundTint="@color/transparent"
+                app:cardCornerRadius="@dimen/dp_20"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="@dimen/dp_2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_30"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginEnd="@dimen/dp_4"
+                        android:contentDescription="@string/content_description"
+                        android:src="@drawable/ic_location" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/shipping_type"
+                            android:layout_width="@dimen/dp_200"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:maxLines="1"
+                            android:text="@string/shipping_title_home"
+                            android:textColor="?attr/colorPrimary"
+                            android:textSize="?attr/text_size_22"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/shipping_date"
+                            android:layout_width="@dimen/dp_200"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.6"
+                            android:maxLines="2"
+                            android:text="@string/shipping_title_temp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textSize="?attr/text_size_16"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/checkout_change_type"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_40"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        android:text="@string/shipping_btn_change"
+                        android:padding="0dp"
+                        android:textSize="?attr/text_size_14"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_40"
+                android:background="@color/white"
+                android:text="@string/shipping_type"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="?attr/text_size_24"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shipping_title_order"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="?attr/text_size_28"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_2"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp_20"
+                android:background="?attr/colorPrimary"
+                app:cardBackgroundColor="?attr/colorPrimary"
+                app:strokeWidth="0dp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/order_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_150" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_4"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_22"
+        app:cardElevation="0dp"
+        app:strokeWidth="@dimen/dp_1"
+        app:strokeColor="?attr/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_4">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_190"
+                    android:background="#F5F5F5"
+                    android:scaleType="fitCenter"
+                    android:padding="@dimen/dp_8"
+                    android:src="@drawable/ic_media_play"
+                    app:shapeAppearanceOverlay="@style/ProductImageShape" />
+
+                <TextView
+                    android:id="@+id/tvNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:background="@drawable/bg_product_new"
+                    android:paddingHorizontal="@dimen/dp_12"
+                    android:paddingVertical="@dimen/dp_6"
+                    android:text="New"
+                    android:textColor="@android:color/white"
+                    android:textSize="?attr/text_size_14" />
+
+                <TextView
+                    android:id="@+id/btnFavorite"
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:background="@drawable/bg_product_favorite"
+                    android:foreground="@drawable/bg_ripple"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="★"
+                    android:textSize="?attr/text_size_16"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Add to favorites" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginHorizontal="@dimen/dp_6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Chiar"
+                    android:textColor="#79513B"
+                    android:textSize="?attr/text_size_20" />
+
+                <TextView
+                    android:id="@+id/tvProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:text="$ 360"
+                    android:textColor="#79513B"
+                    android:textSize="?attr/text_size_20" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_6"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tvProductSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="42dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="This is Chair"
+                    android:textColor="#79513B"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/btnAddProduct"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@drawable/bg_product_add"
+                    android:foreground="@drawable/bg_ripple"
+                    android:gravity="center"
+                    android:text="+"
+                    android:includeFontPadding="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Add product to cart" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

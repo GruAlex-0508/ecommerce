@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_64"
+    android:layout_margin="@dimen/dp_6"
+    android:background="@drawable/bg_subcategory_item"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dp_14"
+    android:paddingEnd="@dimen/dp_12"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/imgSubCategory"
+        android:layout_width="@dimen/dp_38"
+        android:layout_height="@dimen/dp_38"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitCenter"
+        android:layout_marginStart="@dimen/dp_12"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/tvSubCategoryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/dp_14"
+        android:gravity="center"
+        android:text="Category"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="?attr/text_size_18"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+</LinearLayout>

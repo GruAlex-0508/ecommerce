@@ -1,0 +1,78 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.ChonsuApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+    <!-- Night Text Normal theme -->
+    <style name="Theme.ChonsuApp" parent="Theme.ChonsuApp.NormalText">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/car_primary</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorRipple">@color/car_ripple_color</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/car_secondary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorAccent">@color/car_primary</item>
+        <item name="colorTertiary">@color/car_tertiary</item>
+        <item name="colorOutline">@color/car_primary_alpha_50</item>
+        <item name="chipBackgroundColor">@color/car_feedback_background</item>
+        <!-- Customize your theme here. -->
+        <item name="backgroundColor">@color/black</item>
+        <!-- Navigation Gradient Colors -->
+        <item name="navGradient1">@color/nav_night_gradient_1</item>
+        <item name="navGradient2">@color/nav_night_gradient_2</item>
+        <item name="navGradient3">@color/nav_night_gradient_3</item>
+        <!-- Background Gradient Colors -->
+        <item name="bgGradient1">@color/bg_night_gradient_1</item>
+        <item name="bgGradient2">@color/bg_night_gradient_2</item>
+        <!-- Bottom Navigation Bar Gradient Colors -->
+        <item name="bottomNavGradient1">@color/bottom_nav_night_gradient_1</item>
+        <item name="bottomNavGradient2">@color/bottom_nav_night_gradient_2</item>
+    </style>
+
+    <!-- Night Text Normal theme -->
+    <style name="Theme.ChonsuApp.NormalText" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="text_size_8">@dimen/dp_8</item>
+        <item name="text_size_10">@dimen/dp_10</item>
+        <item name="text_size_12">@dimen/dp_12</item>
+        <item name="text_size_14">@dimen/dp_14</item>
+        <item name="text_size_16">@dimen/dp_16</item>
+        <item name="text_size_18">@dimen/dp_18</item>
+        <item name="text_size_20">@dimen/dp_20</item>
+        <item name="text_size_22">@dimen/dp_22</item>
+        <item name="text_size_24">@dimen/dp_24</item>
+        <item name="text_size_26">@dimen/dp_26</item>
+        <item name="text_size_28">@dimen/dp_28</item>
+        <item name="text_size_30">@dimen/dp_30</item>
+        <item name="text_size_32">@dimen/dp_32</item>
+        <item name="text_size_34">@dimen/dp_34</item>
+        <item name="text_size_36">@dimen/dp_36</item>
+        <item name="text_size_38">@dimen/dp_38</item>
+        <item name="text_size_40">@dimen/dp_40</item>
+        <item name="text_size_42">@dimen/dp_42</item>
+    </style>
+
+    <!-- Night Text Large theme -->
+    <style name="Theme.ChonsuApp.LargeText" parent="Theme.ChonsuApp">
+        <item name="text_size_8">@dimen/dp_10</item>
+        <item name="text_size_10">@dimen/dp_12</item>
+        <item name="text_size_12">@dimen/dp_14</item>
+        <item name="text_size_14">@dimen/dp_16</item>
+        <item name="text_size_16">@dimen/dp_18</item>
+        <item name="text_size_18">@dimen/dp_20</item>
+        <item name="text_size_20">@dimen/dp_22</item>
+        <item name="text_size_22">@dimen/dp_24</item>
+        <item name="text_size_24">@dimen/dp_26</item>
+        <item name="text_size_26">@dimen/dp_28</item>
+        <item name="text_size_28">@dimen/dp_30</item>
+        <item name="text_size_30">@dimen/dp_32</item>
+        <item name="text_size_32">@dimen/dp_34</item>
+        <item name="text_size_34">@dimen/dp_36</item>
+        <item name="text_size_36">@dimen/dp_38</item>
+        <item name="text_size_38">@dimen/dp_40</item>
+        <item name="text_size_40">@dimen/dp_42</item>
+        <item name="text_size_42">@dimen/dp_44</item>
+    </style>
+</resources>

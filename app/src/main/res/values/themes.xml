@@ -1,0 +1,80 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.ChonsuApp" parent="Theme.ChonsuApp.NormalText">
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+    <!-- Light Text Normal theme -->
+    <style name="Theme.ChonsuApp" parent="Base.Theme.ChonsuApp">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/building_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorRipple">@color/building_ripple_color</item>
+        <item name="colorSecondaryAlpha30">@color/building_secondary_alpha_30</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/building_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorAccent">@color/building_primary</item>
+        <item name="colorTertiary">@color/building_tertiary</item>
+        <item name="colorOutline">@color/building_primary_alpha_50</item>
+        <item name="chipBackgroundColor">@color/building_feedback_background</item>
+        <!-- Attribute Colors -->
+        <item name="backgroundColor">@color/white</item>
+        <!-- Navigation Gradient Colors -->
+        <item name="navGradient1">@color/nav_light_gradient_1</item>
+        <item name="navGradient2">@color/nav_light_gradient_2</item>
+        <item name="navGradient3">@color/nav_light_gradient_3</item>
+        <!-- Background Gradient Colors -->
+        <item name="bgGradient1">@color/bg_light_gradient_1</item>
+        <item name="bgGradient2">@color/bg_light_gradient_2</item>
+        <!-- Bottom Navigation Bar Gradient Colors -->
+        <item name="bottomNavGradient1">@color/bottom_nav_light_gradient_1</item>
+        <item name="bottomNavGradient2">@color/bottom_nav_light_gradient_2</item>
+    </style>
+
+    <!-- Light Text Normal theme -->
+    <style name="Theme.ChonsuApp.NormalText" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="text_size_8">@dimen/dp_8</item>
+        <item name="text_size_10">@dimen/dp_10</item>
+        <item name="text_size_12">@dimen/dp_12</item>
+        <item name="text_size_14">@dimen/dp_14</item>
+        <item name="text_size_16">@dimen/dp_16</item>
+        <item name="text_size_18">@dimen/dp_18</item>
+        <item name="text_size_20">@dimen/dp_20</item>
+        <item name="text_size_22">@dimen/dp_22</item>
+        <item name="text_size_24">@dimen/dp_24</item>
+        <item name="text_size_26">@dimen/dp_26</item>
+        <item name="text_size_28">@dimen/dp_28</item>
+        <item name="text_size_30">@dimen/dp_30</item>
+        <item name="text_size_32">@dimen/dp_32</item>
+        <item name="text_size_34">@dimen/dp_34</item>
+        <item name="text_size_36">@dimen/dp_36</item>
+        <item name="text_size_38">@dimen/dp_38</item>
+        <item name="text_size_40">@dimen/dp_40</item>
+        <item name="text_size_42">@dimen/dp_42</item>
+    </style>
+
+    <!-- Light Text Large theme -->
+    <style name="Theme.ChonsuApp.LargeText" parent="Theme.ChonsuApp">
+        <item name="text_size_8">@dimen/dp_10</item>
+        <item name="text_size_10">@dimen/dp_12</item>
+        <item name="text_size_12">@dimen/dp_14</item>
+        <item name="text_size_14">@dimen/dp_16</item>
+        <item name="text_size_16">@dimen/dp_18</item>
+        <item name="text_size_18">@dimen/dp_20</item>
+        <item name="text_size_20">@dimen/dp_22</item>
+        <item name="text_size_22">@dimen/dp_24</item>
+        <item name="text_size_24">@dimen/dp_26</item>
+        <item name="text_size_26">@dimen/dp_28</item>
+        <item name="text_size_28">@dimen/dp_30</item>
+        <item name="text_size_30">@dimen/dp_32</item>
+        <item name="text_size_32">@dimen/dp_34</item>
+        <item name="text_size_34">@dimen/dp_36</item>
+        <item name="text_size_36">@dimen/dp_38</item>
+        <item name="text_size_38">@dimen/dp_40</item>
+        <item name="text_size_40">@dimen/dp_42</item>
+        <item name="text_size_42">@dimen/dp_44</item>
+
+        <item name="colorControlHighlight">?attr/colorRipple</item>
+    </style>
+</resources>

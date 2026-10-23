@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.button.MaterialButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/btn_category_chip"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_40"
+    android:layout_marginEnd="@dimen/dp_8"
+    android:minWidth="@dimen/dp_90"
+    android:paddingHorizontal="@dimen/dp_18"
+    android:text="Furniture"
+    android:textAllCaps="false"
+    android:textColor="?attr/colorPrimary"
+    android:textSize="?attr/text_size_14"
+    app:backgroundTint="@color/white"
+    app:cornerRadius="@dimen/dp_24"
+    app:strokeColor="?attr/colorPrimary"
+    app:strokeWidth="@dimen/dp_1"
+    app:rippleColor="?attr/colorSecondary" />

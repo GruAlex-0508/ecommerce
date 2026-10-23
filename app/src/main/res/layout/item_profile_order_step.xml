@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/dp_4">
+
+    <TextView
+        android:id="@+id/tvOrderIcon"
+        android:layout_width="@dimen/dp_44"
+        android:layout_height="@dimen/dp_44"
+        android:background="@drawable/bg_profile_step_circle"
+        android:gravity="center"
+        android:text="✓"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="?attr/text_size_24" />
+
+    <TextView
+        android:id="@+id/tvOrderStepLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="巴阿巴"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="?attr/text_size_16" />
+
+</LinearLayout>

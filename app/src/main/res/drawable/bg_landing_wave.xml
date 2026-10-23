@@ -1,0 +1,141 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="360dp"
+    android:height="171dp"
+    android:viewportWidth="360"
+    android:viewportHeight="171"
+    tools:ignore="VectorRaster">
+
+    <!-- Shadow Layer 10 -->
+    <path
+        android:fillColor="#05000000"
+        android:pathData="
+        M0,6
+        L360,6
+        L360,99
+        C320,108 280,122 240,135
+        C200,149 160,167 120,170
+        C85,173 40,171 0,151
+        Z" />
+
+    <!-- Shadow Layer 9 -->
+    <path
+        android:fillColor="#06000000"
+        android:pathData="
+        M0,5.4
+        L360,5.4
+        L360,98.4
+        C320,107.4 280,121.4 240,134.4
+        C200,148.4 160,166.4 120,169.4
+        C85,172.4 40,170.4 0,150.4
+        Z" />
+
+    <!-- Shadow Layer 8 -->
+    <path
+        android:fillColor="#07000000"
+        android:pathData="
+        M0,4.8
+        L360,4.8
+        L360,97.8
+        C320,106.8 280,120.8 240,133.8
+        C200,147.8 160,165.8 120,168.8
+        C85,171.8 40,169.8 0,149.8
+        Z" />
+
+    <!-- Shadow Layer 7 -->
+    <path
+        android:fillColor="#08000000"
+        android:pathData="
+        M0,4.2
+        L360,4.2
+        L360,97.2
+        C320,106.2 280,120.2 240,133.2
+        C200,147.2 160,165.2 120,168.2
+        C85,171.2 40,169.2 0,149.2
+        Z" />
+
+    <!-- Shadow Layer 6 -->
+    <path
+        android:fillColor="#09000000"
+        android:pathData="
+        M0,3.6
+        L360,3.6
+        L360,96.6
+        C320,105.6 280,119.6 240,132.6
+        C200,146.6 160,164.6 120,167.6
+        C85,170.6 40,168.6 0,148.6
+        Z" />
+
+    <!-- Shadow Layer 5 -->
+    <path
+        android:fillColor="#0A000000"
+        android:pathData="
+        M0,3
+        L360,3
+        L360,96
+        C320,105 280,119 240,132
+        C200,146 160,164 120,167
+        C85,170 40,168 0,148
+        Z" />
+
+    <!-- Shadow Layer 4 -->
+    <path
+        android:fillColor="#0C000000"
+        android:pathData="
+        M0,2.4
+        L360,2.4
+        L360,95.4
+        C320,104.4 280,118.4 240,131.4
+        C200,145.4 160,163.4 120,166.4
+        C85,169.4 40,167.4 0,147.4
+        Z" />
+
+    <!-- Shadow Layer 3 -->
+    <path
+        android:fillColor="#0E000000"
+        android:pathData="
+        M0,1.8
+        L360,1.8
+        L360,94.8
+        C320,103.8 280,117.8 240,130.8
+        C200,144.8 160,162.8 120,165.8
+        C85,168.8 40,166.8 0,146.8
+        Z" />
+
+    <!-- Shadow Layer 2 -->
+    <path
+        android:fillColor="#10000000"
+        android:pathData="
+        M0,1.2
+        L360,1.2
+        L360,94.2
+        C320,103.2 280,117.2 240,130.2
+        C200,144.2 160,162.2 120,165.2
+        C85,168.2 40,166.2 0,146.2
+        Z" />
+
+    <!-- Shadow Layer 1 -->
+    <path
+        android:fillColor="#12000000"
+        android:pathData="
+        M0,0.6
+        L360,0.6
+        L360,93.6
+        C320,102.6 280,116.6 240,129.6
+        C200,143.6 160,161.6 120,164.6
+        C85,167.6 40,165.6 0,145.6
+        Z" />
+
+    <!-- Main shape -->
+    <path
+        android:fillColor="?attr/bottomNavGradient2"
+        android:pathData="
+        M0,0
+        L360,0
+        L360,93
+        C320,102 280,116 240,129
+        C200,143 160,161 120,164
+        C85,167 40,165 0,145
+        Z" />
+
+</vector>

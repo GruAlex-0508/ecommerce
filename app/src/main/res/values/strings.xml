@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">ChonsuEcommerce 1.0</string>
+
+    <string name="logo_title">Building Ecommerce</string>
+    <string name="logo_tip">This product is saved from software laws.</string>
+    <string name="logo_date">2026.9.17</string>
+
+    <string name="exit_confirm">Press again to exit.</string>
+
+    <string name="navigation_drawer_open">Open Drawer</string>
+    <string name="navigation_drawer_close">Close Drawer</string>
+
+    <string name="nav_item_sign_in">Sign In</string>
+    <string name="nav_item_sign_out">Sign Out</string>
+    <string name="nav_item_building">Building</string>
+    <string name="nav_item_car">Car</string>
+    <string name="nav_item_promotion">Promotion</string>
+    <string name="nav_item_foreign">Foreign</string>
+    <string name="nav_item_basket">Basket</string>
+    <string name="nav_item_favourite">Favourite</string>
+    <string name="nav_item_setting">Setting</string>
+    <string name="nav_item_feedback">Feedback</string>
+    <string name="nav_item_help">Help</string>
+
+    <string name="order_category_suggest">Suggest</string>
+    <string name="order_category_accept">Accept</string>
+    <string name="order_category_delivery">Delivery</string>
+
+    <string name="fragment_landing">Landing Fragment</string>
+    <string name="fragment_category">Category Fragment</string>
+    <string name="fragment_promotion">Promotion Fragment</string>
+    <string name="fragment_foreign">Foreign Product Fragment</string>
+    <string name="fragment_profile">Profile Fragment</string>
+
+    <string name="bottom_nav_landing">Home Screen</string>
+    <string name="bottom_nav_category">Product Category</string>
+    <string name="bottom_nav_promotion">Promotion</string>
+    <string name="bottom_nav_foreign">Foreign Product</string>
+    <string name="bottom_nav_profile">User Profile</string>
+
+    <string name="fragment_landing_background">Header Background</string>
+    <string name="fragment_landing_ic_menu">Menu Icon</string>
+    <string name="fragment_landing_ic_news">News Icon</string>
+    <string name="fragment_landing_ic_cart">Cart Icon</string>
+    <string name="fragment_landing_ic_search">Search Icon</string>
+    <string name="fragment_landing_clear_search">Clear Search</string>
+    <string name="fragment_landing_searchbar">Search products…</string>
+    <string name="fragment_landing_ic_camera">Search by image</string>
+    <string name="fragment_landing_categories">Categories</string>
+    <string name="fragment_landing_category_image">Category</string>
+    <string name="fragment_landing_today_service">Today Service</string>
+    <string name="fragment_landing_first_banner">First Banner</string>
+    <string name="fragment_landing_second_banner">Second Banner</string>
+    <string name="fragment_landing_ar_image">AR Image View</string>
+    <string name="fragment_landing_video_player">Video Player</string>
+    <string name="fragment_landing_find_us_map">Finding Us Map</string>
+    <string name="fragment_landing_new_products">New Products</string>
+    <string name="fragment_landing_recommend_products">Recommend Products</string>
+    <string name="fragment_landing_see_all">See all >></string>
+    <string name="fragment_landing_product_new">NEW</string>
+    <string name="fragment_landing_products">Product</string>
+    <string name="fragment_landing_product_price">360 $</string>
+    <string name="fragment_landing_contact_title">Contact Information</string>
+    <string name="fragment_landing_contact_name">Administrator</string>
+    <string name="fragment_landing_contact_number">+1 407 602 5588</string>
+    <string name="fragment_landing_banner_chip">Convenient and Fast</string>
+    <string name="fragment_landing_promotion_title">Today Service</string>
+
+    <string name="not_found"> category was not found</string>
+
+
+    <string name="fragment_category_title">All Categories</string>
+    <string name="fragment_category_furniture">Furniture</string>
+    <string name="fragment_category_products">Products</string>
+
+    <string name="product_btn_minus">-</string>
+    <string name="product_btn_plus">+</string>
+    <string name="product_quantity">1</string>
+    <string name="product_price">360$</string>
+
+
+    <string name="shipping_address">Shipping Address</string>
+    <string name="shipping_type">Shipping Type</string>
+    <string name="shipping_checkout">Checkout</string>
+    <string name="shipping_apply">Apply</string>
+    <string name="shipping_btn_add">Add New Shipping Address</string>
+    <string name="shipping_btn_continue">Continue</string>
+    <string name="shipping_btn_change">Change</string>
+    <string name="shipping_type_regular">Regular</string>
+    <string name="shipping_type_cargo">Cargo</string>
+    <string name="shipping_type_fast">Fast</string>
+    <string name="shipping_title_home">HOME</string>
+    <string name="shipping_title_order">Order List</string>
+    <string name="shipping_title_temp">1901 Preston Rd. Inglewood,Maine 98380</string>
+    <string name="shipping_title_size">Size : XL</string>
+    <string name="shipping_title_price">$ 380</string>
+    <string name="shipping_title_amount">2</string>
+    <string name="shipping_add_title">Title</string>
+    <string name="shipping_add_info">Please input shipping info</string>
+    <string name="shipping_add_address">Address</string>
+    <string name="shipping_btn_no">NO</string>
+    <string name="shipping_btn_yes">YES</string>
+
+    <string name="feedback_administrator">ADMINISTRATOR</string>
+    <string name="feedback_message_manager">manager</string>
+
+    <string name="content_description">Image</string>
+    <string name="feedback_hint">Type a Message</string>
+    <string name="feedback_mic_notification">Mic button clicked!</string>
+    <string name="feedback_input_notification">Please input your feedback</string>
+    <string name="feedback_tel_number">tel:987654321</string>
+    <string name="feedback_add_user">User</string>
+
+    <string name="foreign_order_list">Order List</string>
+    <string name="foreign_event_bathroom">Bathroom</string>
+    <string name="foreign_event_description">Planning import bathroom materials</string>
+    <string name="foreign_new_tag">New</string>
+
+    <string name="profile_username">Dawn</string>
+    <string name="profile_cid">13132093406</string>
+    <string name="profile_applying">Applying</string>
+    <string name="profile_received">Received</string>
+    <string name="profile_transfer">Transfer</string>
+    <string name="profile_completed">Completed</string>
+</resources>

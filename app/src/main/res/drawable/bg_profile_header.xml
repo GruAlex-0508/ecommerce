@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="420dp"
+    android:viewportWidth="360"
+    android:viewportHeight="420">
+
+    <!-- Brown layer visible below the white curve -->
+    <path
+        android:fillColor="#79543D"
+        android:pathData="M0,0 H360 V285
+            C310,335 245,365 180,370
+            C110,370 45,340 0,285 Z" />
+
+    <!-- White upper area -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,0 H360 V265
+            C310,315 245,345 180,350
+            C110,350 45,320 0,265 Z" />
+
+</vector>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LandingFragment">
+
+    <fragment
+        android:id="@+id/LandingFragment"
+        android:name="com.chonsu.ecommerce.fragment.main.LandingFragment"
+        android:label="@string/fragment_landing"
+        tools:layout="@layout/fragment_landing" />
+
+    <fragment
+        android:id="@+id/CategoryFragment"
+        android:name="com.chonsu.ecommerce.fragment.main.CategoryFragment"
+        android:label="@string/fragment_category"
+        tools:layout="@layout/fragment_category" />
+
+    <fragment
+        android:id="@+id/PromotionFragment"
+        android:name="com.chonsu.ecommerce.fragment.main.PromotionFragment"
+        android:label="@string/fragment_promotion"
+        tools:layout="@layout/fragment_promotion" />
+
+    <fragment
+        android:id="@+id/ForeignFragment"
+        android:name="com.chonsu.ecommerce.fragment.main.ForeignFragment"
+        android:label="@string/fragment_foreign"
+        tools:layout="@layout/fragment_foreign_product" />
+
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.chonsu.ecommerce.fragment.main.ProfileFragment"
+        android:label="@string/fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

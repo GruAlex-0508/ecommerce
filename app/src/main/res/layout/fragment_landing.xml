@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_landing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".fragment.main.LandingFragment">
+
+    <LinearLayout
+        android:id="@+id/layout_landing_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_100">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_landing_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_230">
+
+<!--            <ImageView-->
+<!--                android:id="@+id/img_container_shadow"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="@dimen/dp_8"-->
+<!--                android:src="@drawable/bg_landing_wave_shadow"-->
+<!--                android:scaleType="fitXY"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <ImageView
+                android:id="@+id/img_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/bg_landing_wave"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_header_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.2"
+                android:contentDescription="@string/fragment_landing_background"
+                android:scaleType="fitXY"
+                android:src="@drawable/landing_background2"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="@dimen/dp_8"/>
+
+            <LinearLayout
+                android:id="@+id/layout_landing_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_78"
+                app:layout_constraintTop_toTopOf="@id/layout_landing_header">
+
+                <ImageButton
+                    android:id="@+id/btn_landing_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_ripple"
+                    android:clickable="true"
+                    android:contentDescription="@string/fragment_landing_ic_menu"
+                    android:focusable="true"
+                    android:padding="@dimen/dp_8"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_landing_menu"
+                    app:tint="@color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btn_landing_social"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@drawable/bg_ripple"
+                    android:clickable="true"
+                    android:contentDescription="@string/fragment_landing_ic_news"
+                    android:focusable="true"
+                    android:padding="@dimen/dp_8"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_landing_news"
+                    app:tint="@color/white" />
+
+                <ImageButton
+                    android:id="@+id/btn_landing_cart"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@drawable/bg_ripple"
+                    android:clickable="true"
+                    android:contentDescription="@string/fragment_landing_ic_cart"
+                    android:focusable="true"
+                    android:padding="@dimen/dp_8"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_landing_cart"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_2"
+                android:layout_marginHorizontal="@dimen/dp_24"
+                android:background="@drawable/header_divider"
+                app:layout_constraintTop_toBottomOf="@+id/layout_landing_top" />
+
+            <FrameLayout
+                android:id="@+id/layout_search_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_52"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_28"
+                android:elevation="@dimen/dp_4"
+                app:layout_constraintTop_toBottomOf="@+id/layout_landing_top"
+                app:layout_goneMarginTop="@dimen/dp_90">
+
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/blur_search_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_landing_search_blur"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true" />
+
+                <LinearLayout
+                    android:id="@+id/layout_search_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/dp_30"
+                    android:background="@color/transparent">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:contentDescription="@string/fragment_landing_ic_search"
+                        android:src="@drawable/ic_search"
+                        app:tint="?attr/colorPrimary" />
+
+                    <EditText
+                        android:id="@+id/edt_landing_search"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:autofillHints="Search"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/fragment_landing_searchbar"
+                        android:imeOptions="actionSearch"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        android:textColor="?attr/colorPrimary"
+                        android:textColorHint="?attr/colorPrimary"
+                        android:textSize="?attr/text_size_14" />
+
+                    <ImageButton
+                        android:id="@+id/btn_landing_clear"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:background="@drawable/bg_ripple"
+                        android:clickable="true"
+                        android:contentDescription="@string/fragment_landing_clear_search"
+                        android:focusable="true"
+                        android:padding="@dimen/dp_10"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_clear"
+                        android:visibility="gone"
+                        app:tint="?attr/colorPrimary" />
+
+                    <View
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="@dimen/dp_28"
+                        android:background="?attr/colorPrimary" />
+
+                    <ImageButton
+                        android:id="@+id/btn_landing_camera"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:background="@drawable/bg_ripple"
+                        android:clickable="true"
+                        android:contentDescription="@string/fragment_landing_ic_camera"
+                        android:focusable="true"
+                        android:padding="@dimen/dp_8"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_camera"
+                        app:tint="?attr/colorPrimary" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/dp_12">
+
+            <TextView
+                android:id="@+id/txt_category_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:text="@string/fragment_landing_categories"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="?attr/text_size_20"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layoutMainCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dp_12"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/dp_20"
+                android:weightSum="2">
+
+                <com.chonsu.ecommerce.common.views.CustomMaterialCardView
+                    android:id="@+id/cardFurniture"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/transparent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cornerBottomLeftRadius="@dimen/dp_16"
+                    app:cornerBottomRightRadius="0dp"
+                    app:cornerTopLeftRadius="@dimen/dp_16"
+                    app:cornerTopRightRadius="0dp"
+                    app:rippleColor="?attr/colorSecondary"
+                    app:strokeColor="?attr/colorPrimary"
+                    app:strokeWidth="@dimen/dp_2">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/landing_category1" />
+
+                        <View
+                            android:id="@+id/viewFurnitureOverlay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha="0.75"
+                            android:background="@drawable/bg_category_selected_overlay_left"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+
+                </com.chonsu.ecommerce.common.views.CustomMaterialCardView>
+
+                <com.chonsu.ecommerce.common.views.CustomMaterialCardView
+                    android:id="@+id/cardCarItem"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/dp_n2"
+                    android:backgroundTint="@color/transparent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cornerBottomLeftRadius="0dp"
+                    app:cornerBottomRightRadius="@dimen/dp_16"
+                    app:cornerTopLeftRadius="0dp"
+                    app:cornerTopRightRadius="@dimen/dp_16"
+                    app:rippleColor="?attr/colorSecondary"
+                    app:strokeColor="?attr/colorPrimary"
+                    app:strokeWidth="@dimen/dp_2">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/landing_category2" />
+
+                        <View
+                            android:id="@+id/viewCarItemOverlay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha="0.75"
+                            android:background="@drawable/bg_category_selected_overlay_right"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                </com.chonsu.ecommerce.common.views.CustomMaterialCardView>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSmallCategories"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/dp_20" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_4"
+                android:layout_marginHorizontal="@dimen/dp_24"
+                android:background="@drawable/category_divider" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategoryCircles"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/dp_12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_4"
+                android:layout_marginHorizontal="@dimen/dp_24"
+                android:background="@drawable/category_divider" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:layout_marginHorizontal="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_20"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/dp_16"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/fragment_landing_today_service"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/landing_today_service" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:background="?attr/colorPrimary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:letterSpacing="0.05"
+                    android:text="@string/fragment_landing_promotion_title"
+                    android:textColor="@color/white"
+                    android:textSize="?attr/text_size_24"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:text="@string/fragment_landing_categories"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="?attr/text_size_20"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_215"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_14"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/dp_16"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/fragment_landing_first_banner"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/landing_banner1" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="@dimen/dp_16"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
+                    app:shapeAppearanceOverlay="@style/RightRoundedCard"
+                    app:strokeWidth="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/dp_24"
+                        android:text="@string/fragment_landing_banner_chip"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="?attr/text_size_12"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_215"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_14"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/fragment_landing_first_banner"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/landing_banner2" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="@dimen/dp_16"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
+                    app:shapeAppearanceOverlay="@style/RightRoundedCard"
+                    app:strokeWidth="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/dp_24"
+                        android:text="@string/fragment_landing_banner_chip"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="?attr/text_size_12"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.card.MaterialCardView>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_215"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_14"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/fragment_landing_first_banner"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/landing_banner3" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="@dimen/dp_16"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
+                    app:shapeAppearanceOverlay="@style/RightRoundedCard"
+                    app:strokeWidth="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/dp_24"
+                        android:text="@string/fragment_landing_banner_chip"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="?attr/text_size_12"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.card.MaterialCardView>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_215"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_14"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/fragment_landing_first_banner"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/landing_banner4" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="@dimen/dp_16"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
+                    app:shapeAppearanceOverlay="@style/RightRoundedCard"
+                    app:strokeWidth="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/dp_24"
+                        android:text="@string/fragment_landing_banner_chip"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="?attr/text_size_12"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.card.MaterialCardView>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_16"
+                android:numColumns="2"
+                app:alignmentMode="alignMargins"
+                app:useDefaultMargins="false">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/dp_16"
+                    app:cardElevation="0dp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="0"
+                    app:strokeWidth="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/fragment_landing_ar_image"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/landing_arview" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/dp_16"
+                    app:cardElevation="0dp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="0"
+                    app:strokeWidth="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/fragment_landing_ar_image"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/landing_arview" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fragment_landing_new_products"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="?attr/text_size_18"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btn_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_landing_seeall"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/bg_ripple"
+                    android:paddingHorizontal="@dimen/dp_20"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:text="@string/fragment_landing_see_all"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="?attr/text_size_12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProductCarousel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_140"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:background="@color/transparent"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fragment_landing_recommend_products"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="?attr/text_size_18"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btn_see_all2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_landing_seeall"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/bg_ripple"
+                    android:paddingHorizontal="@dimen/dp_20"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:text="@string/fragment_landing_see_all"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="?attr/text_size_12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecommendProductCarousel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_140"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:background="@color/transparent"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_video_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_180"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <ImageView
+                android:id="@+id/img_video_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/fragment_landing_video_player"
+                android:scaleType="fitXY"
+                android:src="@drawable/landing_aboutus" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_gravity="center"
+                android:contentDescription="@string/fragment_landing_video_player"
+                android:src="@drawable/ic_media_play"
+                app:tint="@color/white" />
+
+        </FrameLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_180"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_20"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/dp_16"
+            app:strokeWidth="0dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/fragment_landing_find_us_map"
+                android:scaleType="centerCrop"
+                android:src="@drawable/landing_map" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/layout_contact_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/gradient_contact"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_20">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:text="@string/fragment_landing_contact_title"
+                android:textColor="@color/white"
+                android:textSize="?attr/text_size_20"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_landing_contact_name"
+                    android:textColor="@color/white"
+                    android:textSize="?attr/text_size_14" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    android:text="@string/fragment_landing_contact_number"
+                    android:textColor="@color/white"
+                    android:textSize="?attr/text_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_landing_contact_name"
+                    android:textColor="@color/white"
+                    android:textSize="?attr/text_size_14" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    android:text="@string/fragment_landing_contact_number"
+                    android:textColor="@color/white"
+                    android:textSize="?attr/text_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_landing_contact_name"
+                    android:textColor="@color/white"
+                    android:textSize="?attr/text_size_14" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    android:text="@string/fragment_landing_contact_number"
+                    android:textColor="@color/white"
+                    android:textSize="?attr/text_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_landing_contact_name"
+                    android:textColor="@color/white"
+                    android:textSize="?attr/text_size_14" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    android:text="@string/fragment_landing_contact_number"
+                    android:textColor="@color/white"
+                    android:textSize="?attr/text_size_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProductGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:paddingHorizontal="@dimen/dp_20" />
+
+    </LinearLayout>
+
+</ScrollView>
