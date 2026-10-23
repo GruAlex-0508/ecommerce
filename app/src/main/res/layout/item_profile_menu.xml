@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layoutProfileMenuRoot"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center_vertical"
-    android:minHeight="78dp"
-    android:paddingStart="@dimen/dp_8"
-    android:paddingEnd="0dp"
     android:layout_marginHorizontal="@dimen/dp_20"
     android:background="?attr/selectableItemBackground"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/dp_6">
 
     <FrameLayout
         android:id="@+id/layoutMenuIcon"
-        android:layout_width="62dp"
-        android:layout_height="62dp"
-        android:background="@drawable/bg_profile_icon"
-        android:gravity="center">
+        android:layout_width="@dimen/dp_44"
+        android:layout_height="@dimen/dp_44"
+        android:background="@drawable/bg_profile_icon">
 
         <ImageView
             android:id="@+id/imgMenuIcon"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
             android:layout_gravity="center"
-            android:contentDescription="@null"
-            android:scaleType="fitCenter" />
+            android:contentDescription="@null" />
 
     </FrameLayout>
 
@@ -34,21 +30,17 @@
         android:id="@+id/tvMenuTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
         android:layout_weight="1"
-        android:layout_marginStart="12dp"
-        android:text="Settings"
-        android:textColor="#79543D"
-        android:textSize="18sp"
-        android:fontFamily="sans" />
+        android:maxLines="1"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="?attr/text_size_16" />
 
-    <TextView
-        android:id="@+id/tvMenuArrow"
-        android:layout_width="32dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="›"
-        android:textColor="#79543D"
-        android:textSize="42sp"
-        android:includeFontPadding="false" />
+    <ImageView
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_chevron_right"
+        app:tint="?attr/colorPrimary" />
 
 </LinearLayout>

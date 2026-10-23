@@ -60,7 +60,7 @@
                 <ImageView
                     android:layout_width="@dimen/dp_24"
                     android:layout_height="@dimen/dp_24"
-                    android:src="@drawable/ic_order_suggest"
+                    android:src="@drawable/ic_order_applying"
                     android:tint="@color/white" />
 
                 <TextView
@@ -111,7 +111,7 @@
                 <ImageView
                     android:layout_width="@dimen/dp_24"
                     android:layout_height="@dimen/dp_24"
-                    android:src="@drawable/ic_order_accept"
+                    android:src="@drawable/ic_order_received"
                     android:tint="@color/white" />
 
                 <TextView
@@ -162,7 +162,7 @@
                 <ImageView
                     android:layout_width="@dimen/dp_24"
                     android:layout_height="@dimen/dp_24"
-                    android:src="@drawable/ic_order_delivery"
+                    android:src="@drawable/ic_order_transfer"
                     android:tint="@color/white" />
 
                 <TextView

@@ -1,36 +1,42 @@
 package com.chonsu.ecommerce.fragment.main;
 
 import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.core.widget.ImageViewCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.chonsu.ecommerce.R;
+import com.chonsu.ecommerce.adapter.ProfileMenuAdapter;
+import com.chonsu.ecommerce.common.Global;
+import com.chonsu.ecommerce.config.ThemeManager;
 import com.chonsu.ecommerce.databinding.FragmentProfileBinding;
-import com.chonsu.ecommerce.databinding.ItemProfileMenuBinding;
+import com.chonsu.ecommerce.databinding.ItemProfileOrderStepBinding;
+import com.chonsu.ecommerce.model.ProfileMenuItem;
 
-public class ProfileFragment extends Fragment {
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProfileFragment extends Fragment implements ProfileMenuAdapter.OnProfileMenuClickListener {
 
     private FragmentProfileBinding binding;
 
-    private final int brown = Color.rgb(121, 84, 61);
-
-    public ProfileFragment() {
-        // Required empty public constructor
-    }
+    public ProfileFragment() {}
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         binding = FragmentProfileBinding.inflate(inflater, container, false);
-
+        Global.applyFont(binding.getRoot());
         return binding.getRoot();
     }
 
@@ -38,50 +44,60 @@ public class ProfileFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        setupProfile();
-        setupMenuRows();
+        setupUserProfile();
         setupOrderSteps();
+        setupMenu();
     }
 
-    private void setupProfile() {
-        binding.tvProfileName.setText("巴阿阿");
-        binding.tvProfilePhone.setText("13132093406");
-    }
-
-    private void setupMenuRows() {
-        configureRow(binding.rowSettings, "Settings", android.R.drawable.ic_menu_preferences, Color.rgb(121, 84, 61), "Settings clicked");
-
-        configureRow(binding.rowNotification, "Notification", android.R.drawable.ic_popup_reminder, Color.rgb(17, 153, 165), "Notification clicked");
-
-        configureRow(binding.rowOrderHistory, "Order History", android.R.drawable.ic_menu_recent_history, Color.rgb(255, 152, 0), "Order History clicked");
-
-        configureRow(binding.rowPrivacy, "Privacy & Policy", android.R.drawable.ic_lock_lock, Color.rgb(3, 150, 220), "Privacy & Policy clicked");
-
-        configureRow(binding.rowAddress, "Shipping Address", android.R.drawable.ic_menu_mylocation, Color.rgb(121, 84, 61), "Shipping Address clicked");
-
-        configureRow(binding.rowLogout, "Log Out", android.R.drawable.ic_lock_power_off, Color.rgb(244, 67, 54), "Log Out clicked");
-    }
-
-    private void configureRow(ItemProfileMenuBinding row, String title, int iconResource, int iconColor, String message) {
-
-        row.tvMenuTitle.setText(title);
-        row.imgMenuIcon.setImageResource(iconResource);
-        row.imgMenuIcon.setImageTintList(ColorStateList.valueOf(iconColor));
-
-        row.layoutMenuIcon.setBackgroundTintList(ColorStateList.valueOf(Color.argb(35, Color.red(iconColor), Color.green(iconColor), Color.blue(iconColor))));
-
-        row.tvMenuArrow.setTextColor(brown);
-        row.getRoot().setOnClickListener(v -> Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show());
+    private void setupUserProfile() {
+        binding.imgProfileAvatar.setImageResource(R.drawable.img_avatar);
+        binding.tvProfileName.setText(R.string.profile_username);
+        binding.tvProfilePhone.setText(R.string.profile_cid);
     }
 
     private void setupOrderSteps() {
-        binding.layoutOrderStep1.setOnClickListener(v -> showMessage("Waiting for payment"));
+        configureOrderStep(binding.stepApplying, R.drawable.ic_order_applying, R.string.profile_applying);
+        configureOrderStep(binding.stepReceived, R.drawable.ic_order_received, R.string.profile_received);
+        configureOrderStep(binding.stepTransfer, R.drawable.ic_order_transfer, R.string.profile_transfer);
+        configureOrderStep(binding.stepCompleted, R.drawable.ic_order_completed, R.string.profile_completed);
+    }
 
-        binding.layoutOrderStep2.setOnClickListener(v -> showMessage("Processing orders"));
+    private void configureOrderStep(ItemProfileOrderStepBinding step, @DrawableRes int iconRes, @StringRes int labelRes) {
+        int primary = ThemeManager.getThemeColor(requireContext(), androidx.appcompat.R.attr.colorPrimary);
 
-        binding.layoutOrderStep3.setOnClickListener(v -> showMessage("Orders in delivery"));
+        step.imgOrderStepIcon.setImageResource(iconRes);
+        ImageViewCompat.setImageTintList(step.imgOrderStepIcon, ColorStateList.valueOf(primary));
+        step.tvOrderStepLabel.setText(labelRes);
 
-        binding.layoutOrderStep4.setOnClickListener(v -> showMessage("Completed orders"));
+        step.getRoot().setOnClickListener(v -> showMessage(getString(labelRes)));
+    }
+
+    private void setupMenu() {
+        ProfileMenuAdapter adapter = new ProfileMenuAdapter(buildMenuItems(), this);
+
+        binding.rvProfileMenu.setLayoutManager(new LinearLayoutManager(requireContext()));
+        binding.rvProfileMenu.setAdapter(adapter);
+    }
+
+    private List<ProfileMenuItem> buildMenuItems() {
+        List<ProfileMenuItem> items = new ArrayList<>();
+
+        items.add(ProfileMenuItem.header(R.string.profile_section_account));
+        items.add(ProfileMenuItem.item(ProfileMenuItem.ID_SETTINGS, R.string.profile_menu_settings, R.drawable.ic_setting, 0));
+        items.add(ProfileMenuItem.item(ProfileMenuItem.ID_NOTIFICATION, R.string.profile_menu_notification, R.drawable.ic_notification, 0));
+        items.add(ProfileMenuItem.item(ProfileMenuItem.ID_ORDER_HISTORY, R.string.profile_menu_order_history, R.drawable.ic_history, 0));
+
+        items.add(ProfileMenuItem.header(R.string.profile_section_support));
+        items.add(ProfileMenuItem.item(ProfileMenuItem.ID_PRIVACY, R.string.profile_menu_privacy, R.drawable.ic_privacy, 0));
+        items.add(ProfileMenuItem.item(ProfileMenuItem.ID_ADDRESS, R.string.profile_menu_address, R.drawable.ic_location, 0));
+        items.add(ProfileMenuItem.item(ProfileMenuItem.ID_LOGOUT, R.string.profile_menu_logout, R.drawable.ic_sign_out, 0));
+
+        return items;
+    }
+
+    @Override
+    public void onProfileMenuClick(ProfileMenuItem item) {
+        showMessage(getString(R.string.profile_menu_clicked, getString(item.getTitleRes())));
     }
 
     private void showMessage(String message) {

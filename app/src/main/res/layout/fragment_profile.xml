@@ -1,45 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_bg"
     android:clipToPadding="false"
     android:fillViewport="true"
+    android:overScrollMode="never"
+    android:paddingBottom="@dimen/dp_110"
     android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/dp_96">
+        android:orientation="vertical">
 
+        <!-- Header: curved background + avatar / name / phone -->
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_390"
-            android:background="@drawable/bg_profile_header">
+            android:layout_height="@dimen/dp_270"
+            android:clipChildren="false">
+
+            <com.chonsu.ecommerce.common.views.ProfileHeaderView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_horizontal"
-                android:layout_marginTop="@dimen/dp_54"
-                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_34"
+                android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/dp_180"
-                    android:layout_height="@dimen/dp_180"
-                    app:cardCornerRadius="@dimen/dp_24"
-                    app:cardElevation="@dimen/dp_4"
-                    app:strokeColor="?attr/colorPrimary"
+                    android:layout_width="@dimen/dp_120"
+                    android:layout_height="@dimen/dp_120"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/dp_20"
+                    app:cardElevation="@dimen/dp_6"
+                    app:strokeColor="@color/white"
                     app:strokeWidth="@dimen/dp_1">
 
                     <ImageView
                         android:id="@+id/imgProfileAvatar"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:contentDescription="Profile picture"
+                        android:contentDescription="@string/profile_avatar_description"
                         android:scaleType="centerCrop"
                         android:src="@drawable/img_avatar" />
 
@@ -49,10 +56,10 @@
                     android:id="@+id/tvProfileName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginTop="@dimen/dp_10"
                     android:text="@string/profile_username"
                     android:textColor="?attr/colorPrimary"
-                    android:textSize="?attr/text_size_24"
+                    android:textSize="?attr/text_size_20"
                     android:textStyle="bold" />
 
                 <TextView
@@ -62,7 +69,7 @@
                     android:layout_marginTop="@dimen/dp_2"
                     android:text="@string/profile_cid"
                     android:textColor="?attr/colorPrimary"
-                    android:textSize="?attr/text_size_22" />
+                    android:textSize="?attr/text_size_18" />
 
             </LinearLayout>
         </FrameLayout>
@@ -72,184 +79,73 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/dp_20"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:layout_marginTop="@dimen/dp_8"
+            android:clipChildren="false"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:id="@+id/layoutOrderStep1"
+            <include
+                android:id="@+id/stepApplying"
+                layout="@layout/item_profile_order_step"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:paddingVertical="@dimen/dp_10"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="?attr/selectableItemBackground">
-
-                <ImageView
-                    android:layout_width="@dimen/dp_48"
-                    android:layout_height="@dimen/dp_48"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_apply" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/profile_applying"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="?attr/text_size_14" />
-            </LinearLayout>
-
+                android:layout_weight="1" />
 
             <View
-                android:layout_width="@dimen/dp_38"
+                android:layout_width="@dimen/dp_50"
                 android:layout_height="@dimen/dp_2"
-                android:layout_marginTop="-14dp"
+                android:layout_marginTop="@dimen/dp_18"
                 android:background="?attr/colorPrimary" />
 
-            <LinearLayout
-                android:id="@+id/layoutOrderStep2"
+            <include
+                android:id="@+id/stepReceived"
+                layout="@layout/item_profile_order_step"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:paddingVertical="@dimen/dp_10"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="?attr/selectableItemBackground">
-
-                <ImageView
-                    android:layout_width="@dimen/dp_48"
-                    android:layout_height="@dimen/dp_48"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_received" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/profile_received"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="?attr/text_size_14" />
-            </LinearLayout>
+                android:layout_weight="1" />
 
             <View
-                android:layout_width="@dimen/dp_38"
+                android:layout_width="@dimen/dp_50"
                 android:layout_height="@dimen/dp_2"
-                android:layout_marginTop="-14dp"
+                android:layout_marginTop="@dimen/dp_18"
                 android:background="?attr/colorPrimary" />
 
-            <LinearLayout
-                android:id="@+id/layoutOrderStep3"
+            <include
+                android:id="@+id/stepTransfer"
+                layout="@layout/item_profile_order_step"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:paddingVertical="@dimen/dp_10"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="?attr/selectableItemBackground">
-
-                <ImageView
-                    android:layout_width="@dimen/dp_48"
-                    android:layout_height="@dimen/dp_48"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_transfer" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/profile_transfer"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="?attr/text_size_14" />
-            </LinearLayout>
+                android:layout_weight="1" />
 
             <View
-                android:layout_width="@dimen/dp_38"
+                android:layout_width="@dimen/dp_50"
                 android:layout_height="@dimen/dp_2"
-                android:layout_marginTop="-14dp"
+                android:layout_marginTop="@dimen/dp_18"
                 android:background="?attr/colorPrimary" />
 
-            <LinearLayout
-                android:id="@+id/layoutOrderStep4"
+            <include
+                android:id="@+id/stepCompleted"
+                layout="@layout/item_profile_order_step"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:paddingVertical="@dimen/dp_10"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="?attr/selectableItemBackground">
-
-                <ImageView
-                    android:layout_width="@dimen/dp_48"
-                    android:layout_height="@dimen/dp_48"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_completed" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/profile_completed"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="?attr/text_size_14" />
-            </LinearLayout>
+                android:layout_weight="1" />
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_2"
-            android:layout_marginTop="@dimen/dp_12"
             android:layout_marginHorizontal="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_12"
             android:background="?attr/colorPrimary" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- Sections + rows (ProfileMenuAdapter) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProfileMenu"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_24"
-            android:layout_marginTop="@dimen/dp_20"
-            android:text="Account"
-            android:textColor="?attr/colorPrimary"
-            android:textSize="?attr/text_size_18"
-            android:textStyle="bold"/>
-
-        <include
-            android:id="@+id/rowSettings"
-            layout="@layout/item_profile_menu" />
-
-        <include
-            android:id="@+id/rowNotification"
-            layout="@layout/item_profile_menu" />
-
-        <include
-            android:id="@+id/rowOrderHistory"
-            layout="@layout/item_profile_menu"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_24"
-            android:layout_marginTop="@dimen/dp_20"
-            android:text="Account"
-            android:textColor="?attr/colorPrimary"
-            android:textSize="?attr/text_size_18"
-            android:textStyle="bold"/>
-
-        <include
-            android:id="@+id/rowPrivacy"
-            layout="@layout/item_profile_menu" />
-
-        <include
-            android:id="@+id/rowAddress"
-            layout="@layout/item_profile_menu" />
-
-        <include
-            android:id="@+id/rowLogout"
-            layout="@layout/item_profile_menu" />
+            android:layout_marginTop="@dimen/dp_8"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never" />
 
     </LinearLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
